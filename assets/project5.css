@@ -77,20 +77,20 @@ body {
     padding-top: 14rem;
 }
 
-.Game {
+.Graphics {
     width: 85%;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.Game h2 {
+.Graphics h2 {
     font-size: 4.6rem;
     font-weight: 600;
     margin-bottom: 2rem;
 }
 
-.Game h2 span {
+.Graphics h2 span {
     background: linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff);
     background-size: 200%;
     -webkit-background-clip: text;
@@ -104,7 +104,7 @@ body {
 }
 
 
-.game-layer {
+.graphic-layer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -113,7 +113,7 @@ body {
     width: 100%;
 }
 
-.game-layer p {
+.graphic-layer p {
     width: 50%;
     font-size: 1.8rem;
     line-height: 2.8rem;
@@ -255,23 +255,26 @@ h4 {
 }
 
 @media (max-width: 992px) {
-    .game-layer {
+    .graphic-layer {
         flex-direction: column;
         text-align: center;
     }
 
-    .game-layer p,
+    .graphic-layer p,
     .tech {
         width: 100%;
     }
 
-    .game-layer p {
+    .graphic-layer p {
         margin-top: 4rem;
     }
 
     .tech ul li {
         margin-left: auto;
         margin-right: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
     }
 }
 
@@ -283,13 +286,35 @@ h4 {
     h4 {
         text-align: center;
     }
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .nav-prev,
+    .nav-next {
+        font-size: 1.6rem;
+    }
+
+    .nav-all {
+        font-size: 1.6rem;
+        padding: 1rem 2.2rem;
+    }
 }
 
 @media (max-width: 480px) {
     html { font-size: 48%; }
-    .Game { width: 95%; }
+    .Graphics { width: 95%; }
+
+    .graphic-layer {
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 380px) {
     html { font-size: 44%; }
+    .Graphics{
+        width: 10px;
+        height: 10px;
+    }
 }

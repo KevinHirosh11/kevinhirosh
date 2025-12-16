@@ -273,6 +273,9 @@ h4 {
         margin-left: auto;
         margin-right: auto;
     }
+    .footer{
+        padding: 2rem 3%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -283,13 +286,34 @@ h4 {
     h4 {
         text-align: center;
     }
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .nav-prev,
+    .nav-next {
+        font-size: 1.6rem;
+    }
+
+    .nav-all {
+        font-size: 1.6rem;
+        padding: 1rem 2.2rem;
+    }
 }
 
 @media (max-width: 480px) {
     html { font-size: 48%; }
     .Game { width: 95%; }
+    .game-layer{
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 380px) {
     html { font-size: 44%; }
+    .video-container{
+        width: 10px;
+        height: 10px;
+    }
 }
