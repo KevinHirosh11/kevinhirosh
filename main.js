@@ -151,7 +151,7 @@ window.addEventListener('resize', () => { cancelAnimationFrame(animationId); ini
 
 /* ==================== TYPED.JS ==================== */
 const typed = new Typed('.typed-text', {
-    strings: ['Frontend Developer', 'Backend Developer', '3D Simulation Designer', 'UI/UX Designer'],
+    strings: ['AI Automation Developer', 'Agentic AI Engineer', 'Systems Automation Architect', 'Electronics & Embedded Systems Designer'],
     typeSpeed: 70,
     backSpeed: 50,
     backDelay: 1500,
