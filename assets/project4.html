@@ -3,98 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="project4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="project-common.css">
     <link rel="icon" type="image/jpg" href="images/kh-icon.jpg">
-    <title>Project Details | @kevirocks</title>
+    <title>Pong Arcade Game — Project Details</title>
 </head>
 <body>
-<header class="header">
-    <a href="../index.html" class="logo">
-        <i class="fa-regular fa-chess-king"></i>
-    </a>
-
-    <div class="social-media">
-        <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/kevinhirosh11/">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://github.com/KevinHirosh11">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://discord.com/channels/@me">
-            <i class="fa-brands fa-discord"></i>
-        </a>
-    </div>
-</header>
-
-<div class="container">
-    <section class="Game">
-
-        <h2><span>Pong</span> Game</h2>
-        <div class="game-layer">
-
-            <p>
-                This project is a classic Pong game developed entirely using Python and the Pygame library.
-                The goal of this project was to strengthen my understanding of game development fundamentals, 
-                real-time graphics rendering, and basic artificial intelligence logic within a 2D environment.
-                <br><br>
-                In this game, the left paddle is controlled by a human player, while the right paddle is controlled by an AI bot. 
-                The player uses keyboard inputs to move the paddle up and down, allowing direct and responsive interaction with the game. 
-                The AI paddle on the right side is programmed to track the ball's vertical movement and respond accordingly, creating a challenging and engaging opponent.
-                The game includes core Pong mechanics such as ball movement, collision detection, paddle physics, and score tracking. 
-                Pygame is used to manage the game window, handle events, render graphics, and maintain a consistent frame rate for smooth gameplay. 
-                Through this project, I implemented logical conditions to control the AI behavior, ensuring it reacts dynamically rather than moving randomly.
-                <br><br>
-                This project demonstrates my ability to work with Python programming, apply game logic, and use Pygame to build interactive applications. 
-                It also reflects my understanding of problem-solving concepts such as object movement, collision handling, and basic AI decision-making. 
-                Overall, this Pong game represents an important step in my journey toward developing more complex and interactive software projects.
-            </p>
-
-            <div class="tech">
-                <h3>Technologies</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>QtPy5</li>
-                </ul>
-            </div>
-
-        </div> 
-        <h4>Finally.</h4>
-
-        <div class="video-container">
-            <video src="videos/video2.mp4" autoplay muted loop></video>
+    <header class="header">
+        <a href="../index.html" class="logo"><span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span></a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kevinhirosh11/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/KevinHirosh11" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.com/channels/@me" target="_blank"><i class="fa-brands fa-discord"></i></a>
         </div>
-
-    </section>
-</div>
-<section class="project-navigation">
-    <div class="nav-wrapper">
-        <a href="project3.html" class="nav-prev">
-            <i class="fa-solid fa-arrow-left"></i> Previous Project
-        </a>
-
-        <a href="project5.html" class="nav-next">
-            Next Project <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
-</section>
-<footer class="footer">
-    <div class="footer-text">
-        <p>Copyright &copy; 2025 by @kevirocks | All Rights Reserved</p>
-    </div>
-
-    <div class="footer-iconTop">
-        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-    </div>
-</footer>
-
-<script src="project4.js"></script>
+    </header>
+    <main class="project-page">
+        <section class="project-hero">
+            <div class="project-eyebrow">2D Game Development</div>
+            <h1>Pygame <span>Pong Arcade</span></h1>
+            <p class="project-intro">A responsive 2D arcade game built in Python featuring real-time collision mechanics and simple AI paddle bot logic.</p>
+        </section>
+        <section class="project-summary">
+            <div class="project-description"><p>This project implements retro Pong game physics using Python and the Pygame rendering library. Player controls are mapped to keyboard inputs for the left paddle, while an AI algorithm calculates ball trajectory vectors to drive the right paddle dynamically. Features include bounce elasticity, score tracking, and smooth frame-rate synchronization.</p></div>
+            <div class="tech-panel"><h2>Stack Used</h2><ul class="tech-list"><li>Python 3</li><li>Pygame</li></ul></div>
+        </section>
+        <section class="media-section"><h2 class="media-heading">Gameplay Demo Video</h2><div class="video-wrap"><video src="videos/video2.mp4" autoplay muted loop playsinline controls></video></div></section>
+    </main>
+    <nav class="project-nav">
+        <a href="project3.html"><i class="fa-solid fa-arrow-left"></i> Previous Project</a>
+        <a href="project5.html" class="next">Next Project <i class="fa-solid fa-arrow-right"></i></a>
+    </nav>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand"><a href="../index.html" class="logo"><span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span></a><p>Full-Stack Developer &amp; Creative Technologist</p></div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/kevinhirosh11/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/KevinHirosh11" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://discord.com/channels/@me" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Kevin Hirosh. All rights reserved. Built with <i class="fa-solid fa-heart"></i></p></div>
+    </footer>
 </body>
 </html>

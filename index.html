@@ -3,44 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kevin Hirosh â€” Full-Stack Developer, UI/UX Designer & 3D Simulation Specialist based in Sri Lanka.">
+    <meta name="description" content="Kevin Hirosh — Full-Stack Developer, UI/UX Designer & 3D Simulation Specialist based in Sri Lanka.">
     <meta name="author" content="Kevin Hirosh">
-    
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Google Fonts: Inter + Space Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="assets/images/kh-icon.jpg">
-    
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    
-    <title>Kevin Hirosh â€” Full-Stack Developer | @kevirocks</title>
+    <title>Kevin Hirosh — Full-Stack Developer | @kevirocks</title>
 </head>
 <body>
-    <!-- Particle Background Canvas -->
     <canvas id="particles-canvas"></canvas>
-    
-    <!-- Custom Cursor Follower -->
     <div class="cursor-follower"></div>
 
-    <!-- ==================== HEADER / NAVIGATION ==================== -->
     <header class="header" id="header">
-        <a href="#home" class="logo">
-            <span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span>
-        </a>
-
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
+        <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         <nav class="navbar" id="navbar">
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -50,390 +29,70 @@
         </nav>
     </header>
 
-    <!-- ==================== MAIN CONTENT ==================== -->
     <main>
-        <!-- HERO SECTION -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fa-solid fa-circle"></i>
-                    <span>Available for work</span>
-                </div>
-                
+                <div class="hero-badge"><i class="fa-solid fa-circle"></i><span>Available for work</span></div>
                 <h1 class="hero-greeting">Hello, I'm</h1>
                 <h2 class="hero-name">Kevin Hirosh</h2>
-                <h3 class="hero-title">
-                    I'm a <span class="typed-text"></span>
-                </h3>
+                <h3 class="hero-title">I'm a <span class="typed-text"></span></h3>
                 <p class="hero-tagline">CODING IS A PART OF MY LIFE...</p>
-
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Let's Talk</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1naim6l7Tuy9x2NSperNmM6d1C7RNeECe/view?usp=sharing" 
-                       class="btn btn-outline" target="_blank" rel="noopener">
-                        <span>Download CV</span>
-                        <i class="fa-solid fa-download"></i>
-                    </a>
+                    <a href="#contact" class="btn btn-primary"><span>Let's Talk</span><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://drive.google.com/file/d/1naim6l7Tuy9x2NSperNmM6d1C7RNeECe/view?usp=sharing" class="btn btn-outline" target="_blank"><span>Download CV</span><i class="fa-solid fa-download"></i></a>
                 </div>
-
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" 
-                       target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/kevinhirosh11/" 
-                       target="_blank" rel="noopener" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://github.com/KevinHirosh11" 
-                       target="_blank" rel="noopener" aria-label="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://discord.com/channels/@me" 
-                       target="_blank" rel="noopener" aria-label="Discord">
-                        <i class="fa-brands fa-discord"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/kevinhirosh11/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/KevinHirosh11" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://discord.com/channels/@me" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
                 </div>
             </div>
-
-            <div class="hero-image">
-                <div class="hero-image-wrapper">
-                    <img src="assets/images/home-img.webp" alt="Kevin Hirosh - Full Stack Developer">
-                    <div class="hero-image-ring"></div>
-                    <div class="hero-image-ring ring-2"></div>
-                </div>
-            </div>
-
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span>Scroll Down</span>
-            </div>
+            <div class="hero-image"><div class="hero-image-wrapper"><img src="assets/images/home-img.webp" alt="Kevin Hirosh - Full Stack Developer"><div class="hero-image-ring"></div><div class="hero-image-ring ring-2"></div></div></div>
+            <div class="scroll-indicator"><div class="mouse"><div class="wheel"></div></div><span>Scroll Down</span></div>
         </section>
 
-        <!-- ABOUT SECTION -->
-        <section class="about" id="about">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-label">Get To Know</span>
-                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-                </div>
-
-                <div class="about-grid">
-                    <div class="about-image">
-                        <div class="about-image-wrapper">
-                            <img src="assets/images/home-img.webp" alt="Kevin Hirosh">
-                            <div class="about-image-border"></div>
-                        </div>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Years Experience</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Projects Done</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">Happy Clients</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-content">
-                        <h3 class="about-subtitle">Full-Stack Developer</h3>
-                        <p class="about-text">
-                            A full-stack developer and systems thinker based in Sri Lanka.
-                            I build scalable, modular applications with clarity and precision â€” from concept to deployment.
-                            Always learning, always shipping. No fluff, just clean code.
-                        </p>
-
-                        <div class="tech-stack">
-                            <div class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-react"></i><span>React</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-java"></i><span>Java</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-php"></i><span>PHP</span></div>
-                            <div class="tech-item"><i class="fa-brands fa-blender"></i><span>Blender</span></div>
-                        </div>
-
-                        <a href="assets/about.html" class="btn btn-primary">
-                            <span>Read More</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+        <section class="about" id="about"><div class="section-container">
+            <div class="section-header"><span class="section-label">Get To Know</span><h2 class="section-title">About <span class="gradient-text">Me</span></h2></div>
+            <div class="about-grid">
+                <div class="about-image"><div class="about-image-wrapper"><img src="assets/images/home-img.webp" alt="Kevin Hirosh"><div class="about-image-border"></div></div><div class="about-stats"><div class="stat-item"><span class="stat-number">3+</span><span class="stat-label">Years Experience</span></div><div class="stat-item"><span class="stat-number">15+</span><span class="stat-label">Projects Done</span></div><div class="stat-item"><span class="stat-number">10+</span><span class="stat-label">Happy Clients</span></div></div></div>
+                <div class="about-content"><h3 class="about-subtitle">Full-Stack Developer</h3><p class="about-text">A full-stack developer and systems thinker based in Sri Lanka. I build scalable, modular applications with clarity and precision — from concept to deployment. Always learning, always shipping. No fluff, just clean code.</p><div class="tech-stack"><div class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML5</span></div><div class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div><div class="tech-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div><div class="tech-item"><i class="fa-brands fa-react"></i><span>React</span></div><div class="tech-item"><i class="fa-brands fa-python"></i><span>Python</span></div><div class="tech-item"><i class="fa-brands fa-java"></i><span>Java</span></div><div class="tech-item"><i class="fa-brands fa-php"></i><span>PHP</span></div><div class="tech-item"><i class="fa-brands fa-blender"></i><span>Blender</span></div></div><a href="assets/about.html" class="btn btn-primary"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
-        </section>
+        </div></section>
 
-        <!-- SERVICES SECTION -->
-        <section class="services" id="services">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-label">What I Do</span>
-                    <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
-                </div>
-
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <h3>Web Development</h3>
-                        <p>I design and build fast, responsive websites and full-stack web applications tailored to your goals. From sleek front-end interfaces to powerful back-end systems, I deliver clean code, scalable architecture, and seamless user experiences.</p>
-                        <a href="#contact" class="service-link">
-                            <span>Get In Touch</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="service-card featured">
-                        <div class="service-badge">Popular</div>
-                        <div class="service-icon">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
-                        <h3>UI/UX Design</h3>
-                        <p>Clean, responsive layouts optimized for desktop and mobile, plus interactive showcases for embedding 3D simulations, AI demos, or game prototypes in a user-friendly way.</p>
-                        <a href="#contact" class="service-link">
-                            <span>Get In Touch</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-cube"></i>
-                        </div>
-                        <h3>3D Simulation Design</h3>
-                        <p>Interactive 3D simulations in Blender using physics, particles, and geometry nodes to visualize complex systems and immersive environments.</p>
-                        <a href="#contact" class="service-link">
-                            <span>Get In Touch</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+        <section class="services" id="services"><div class="section-container">
+            <div class="section-header"><span class="section-label">What I Do</span><h2 class="section-title">My <span class="gradient-text">Services</span></h2></div>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon"><i class="fa-solid fa-code"></i></div><h3>Web Development</h3><p>I design and build fast, responsive websites and full-stack web applications tailored to your goals. From sleek front-end interfaces to powerful back-end systems, I deliver clean code, scalable architecture, and seamless user experiences.</p><a href="#contact" class="service-link"><span>Get In Touch</span><i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="service-card featured"><div class="service-badge">Popular</div><div class="service-icon"><i class="fa-solid fa-palette"></i></div><h3>UI/UX Design</h3><p>Clean, responsive layouts optimized for desktop and mobile, plus interactive showcases for embedding 3D simulations, AI demos, or game prototypes in a user-friendly way.</p><a href="#contact" class="service-link"><span>Get In Touch</span><i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="service-card"><div class="service-icon"><i class="fa-solid fa-cube"></i></div><h3>3D Simulation Design</h3><p>Interactive 3D simulations in Blender using physics, particles, and geometry nodes to visualize complex systems and immersive environments.</p><a href="#contact" class="service-link"><span>Get In Touch</span><i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
-        </section>
+        </div></section>
 
-        <!-- PORTFOLIO SECTION -->
-        <section class="portfolio" id="portfolio">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-label">My Work</span>
-                    <h2 class="section-title">Latest <span class="gradient-text">Projects</span></h2>
-                </div>
-
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="assets/images/img5.webp" alt="Portfolio Website" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <a href="assets/project1.html" class="portfolio-link" aria-label="View Web Design Project">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Web Design</span>
-                            <h3>Personal Portfolio Website</h3>
-                            <p>A responsive personal portfolio built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information.</p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="assets/images/img1.webp" alt="Python Game" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <a href="assets/project4.html" class="portfolio-link" aria-label="View Game Project">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Games</span>
-                            <h3>Two-Player Arcade Game</h3>
-                            <p>A simple two-player arcade game built with Python and Pygame with paddle controls and scoring system.</p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="assets/images/img3.webp" alt="Telescope Simulator" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <a href="assets/project3.html" class="portfolio-link" aria-label="View Telescope Simulator">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Simulation</span>
-                            <h3>Telescope Simulator</h3>
-                            <p>An object-oriented program that models a telescope with classes for telescope, lens, and observation.</p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="assets/images/img2.webp" alt="3D Solar System" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <a href="assets/project2.html" class="portfolio-link" aria-label="View 3D Animation">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">3D Animation</span>
-                            <h3>Solar System in Blender</h3>
-                            <p>A 3D visualization of the solar system created in Blender, featuring the Sun at the center with orbiting planets.</p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="assets/images/img4.webp" alt="Java Snake Game" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <a href="assets/project6.html" class="portfolio-link" aria-label="View Snake Game">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Games</span>
-                            <h3>Java Snake Game</h3>
-                            <p>A Java game where the player controls a snake on a grid while avoiding collisions.</p>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="assets/images/img6.webp" alt="Python Graphics" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <a href="assets/project5.html" class="portfolio-link" aria-label="View Python Graphics">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Creative Tech</span>
-                            <h3>Python Graphics</h3>
-                            <p>Creative technology blending Python systems, AI, and 3D design into immersive digital experiences.</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="portfolio" id="portfolio"><div class="section-container">
+            <div class="section-header"><span class="section-label">My Work</span><h2 class="section-title">Latest <span class="gradient-text">Projects</span></h2></div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card"><div class="portfolio-image"><img src="assets/images/img5.webp" alt="Portfolio Website" loading="lazy"><div class="portfolio-overlay"><a href="assets/project1.html" class="portfolio-link" aria-label="View Web Design Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Web Design</span><h3>Personal Portfolio Website</h3><p>A responsive personal portfolio built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information.</p></div></div>
+                <div class="portfolio-card"><div class="portfolio-image"><img src="assets/images/img1.webp" alt="Python Game" loading="lazy"><div class="portfolio-overlay"><a href="assets/project4.html" class="portfolio-link" aria-label="View Game Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Games</span><h3>Two-Player Arcade Game</h3><p>A two-player arcade game built with Python and Pygame with paddle controls and scoring system.</p></div></div>
+                <div class="portfolio-card"><div class="portfolio-image"><img src="assets/images/img3.webp" alt="Telescope Simulator" loading="lazy"><div class="portfolio-overlay"><a href="assets/project3.html" class="portfolio-link" aria-label="View Telescope Simulator"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Simulation</span><h3>Telescope Simulator</h3><p>An object-oriented program that models a telescope with classes for telescope, lens, and observation.</p></div></div>
+                <div class="portfolio-card"><div class="portfolio-image"><img src="assets/images/img2.webp" alt="3D Solar System" loading="lazy"><div class="portfolio-overlay"><a href="assets/project2.html" class="portfolio-link" aria-label="View 3D Animation"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">3D Animation</span><h3>Solar System in Blender</h3><p>A 3D visualization of the solar system created in Blender, featuring the Sun at the center with orbiting planets.</p></div></div>
+                <div class="portfolio-card"><div class="portfolio-image"><img src="assets/images/img4.webp" alt="Java Snake Game" loading="lazy"><div class="portfolio-overlay"><a href="assets/project6.html" class="portfolio-link" aria-label="View Snake Game"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Games</span><h3>Java Snake Game</h3><p>A Java game where the player controls a snake on a grid while avoiding collisions.</p></div></div>
+                <div class="portfolio-card"><div class="portfolio-image"><img src="assets/images/img6.webp" alt="Python Graphics" loading="lazy"><div class="portfolio-overlay"><a href="assets/project5.html" class="portfolio-link" aria-label="View Python Graphics"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div><div class="portfolio-info"><span class="portfolio-category">Creative Tech</span><h3>Python Graphics</h3><p>Creative technology blending Python systems, AI, and 3D design into immersive digital experiences.</p></div></div>
             </div>
-        </section>
+        </div></section>
 
-        <!-- CONTACT SECTION -->
-        <section class="contact" id="contact">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-label">Get In Touch</span>
-                    <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
-                </div>
-
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>kevinhirosh@email.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Sri Lanka</p>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
-                            <div>
-                                <h4>Availability</h4>
-                                <p>Open for freelance work</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form class="contact-form" id="contact-form" action="https://sheetdb.io/api/v1/33y93hx1rnk3t" method="post">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="name" name="data[Full Name]" placeholder=" " required>
-                                <label for="name">Full Name</label>
-                                <div class="form-line"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="data[Email Address]" placeholder=" " required>
-                                <label for="email">Email Address</label>
-                                <div class="form-line"></div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="data[Mobile Number]" placeholder=" " required>
-                                <label for="phone">Mobile Number</label>
-                                <div class="form-line"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="data[Subject]" placeholder=" " required>
-                                <label for="subject">Subject</label>
-                                <div class="form-line"></div>
-                            </div>
-                        </div>
-                        <div class="form-group full-width">
-                            <textarea id="message" rows="5" name="data[Your Message]" placeholder=" " required></textarea>
-                            <label for="message">Your Message</label>
-                            <div class="form-line"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn" id="submit-btn">
-                            <span>Send Message</span>
-                            <i class="fa-solid fa-paper-plane"></i>
-                            <div class="btn-loader"><div class="spinner"></div></div>
-                            <div class="btn-success"><i class="fa-solid fa-check"></i></div>
-                        </button>
-                    </form>
-                </div>
+        <section class="contact" id="contact"><div class="section-container">
+            <div class="section-header"><span class="section-label">Get In Touch</span><h2 class="section-title">Contact <span class="gradient-text">Me</span></h2></div>
+            <div class="contact-grid"><div class="contact-info"><div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><p>kevinhirosh@email.com</p></div></div><div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div><div><h4>Location</h4><p>Sri Lanka</p></div></div><div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-clock"></i></div><div><h4>Availability</h4><p>Open for freelance work</p></div></div></div>
+                <form class="contact-form" id="contact-form" action="https://sheetdb.io/api/v1/33y93hx1rnk3t" method="post"><div class="form-row"><div class="form-group"><input type="text" id="name" name="data[Full Name]" placeholder=" " required><label for="name">Full Name</label><div class="form-line"></div></div><div class="form-group"><input type="email" id="email" name="data[Email Address]" placeholder=" " required><label for="email">Email Address</label><div class="form-line"></div></div></div><div class="form-row"><div class="form-group"><input type="tel" id="phone" name="data[Mobile Number]" placeholder=" " required><label for="phone">Mobile Number</label><div class="form-line"></div></div><div class="form-group"><input type="text" id="subject" name="data[Subject]" placeholder=" " required><label for="subject">Subject</label><div class="form-line"></div></div></div><div class="form-group full-width"><textarea id="message" rows="5" name="data[Your Message]" placeholder=" " required></textarea><label for="message">Your Message</label><div class="form-line"></div></div><button type="submit" class="btn btn-primary submit-btn" id="submit-btn"><span>Send Message</span><i class="fa-solid fa-paper-plane"></i><div class="btn-loader"><div class="spinner"></div></div><div class="btn-success"><i class="fa-solid fa-check"></i></div></button></form>
             </div>
-        </section>
+        </div></section>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="#home" class="logo">
-                    <span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span>
-                </a>
-                <p>Full-Stack Developer &amp; Creative Technologist</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/kevinhirosh11/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/KevinHirosh11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://discord.com/channels/@me" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Kevin Hirosh. All rights reserved. Built with <i class="fa-solid fa-heart"></i></p>
-        </div>
-        <a href="#home" class="back-to-top" aria-label="Back to top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-    </footer>
+    <footer class="footer"><div class="footer-container"><div class="footer-brand"><a href="#home" class="logo"><span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span></a><p>Full-Stack Developer &amp; Creative Technologist</p></div><div class="footer-social"><a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.instagram.com/kevinhirosh11/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://github.com/KevinHirosh11" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://discord.com/channels/@me" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a></div></div><div class="footer-bottom"><p>&copy; 2025 Kevin Hirosh. All rights reserved. Built with <i class="fa-solid fa-heart"></i></p></div><a href="#home" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a></footer>
 
-    <!-- External Scripts -->
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    
-    <!-- Main JavaScript -->
     <script src="main.js"></script>
 </body>
 </html>

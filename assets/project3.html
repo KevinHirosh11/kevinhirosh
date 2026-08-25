@@ -3,101 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="project3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="project-common.css">
     <link rel="icon" type="image/jpg" href="images/kh-icon.jpg">
-    <title>Project Details | @kevirocks</title>
+    <title>Newtonian Telescope Simulator — Project Details</title>
 </head>
 <body>
-
     <header class="header">
-        <a href="../index.html" class="logo"><i class="fa-regular fa-chess-king"></i></a>
-
-        <div class="social-media">
-                    <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/kevinhirosh11/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/KevinHirosh11"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://discord.com/channels/@me"><i class="fa-brands fa-discord"></i></a>
+        <a href="../index.html" class="logo"><span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span></a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kevinhirosh11/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/KevinHirosh11" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.com/channels/@me" target="_blank"><i class="fa-brands fa-discord"></i></a>
         </div>
     </header>
-    <div class="container">
-        <section class="Simulator">
-            <h2><span>Newtonian Telescope</span> Simulator </h2>
-            <div class="simulator-layer">
-                <p>During my Second Year - First Semester, I successfully completed a Python-based Newtonian Telescope Simulator as part of my academic project work.
-                    The objective of this project was to understand and demonstrate the working principles of a Newtonian reflecting telescope through both software simulation and 3D visualization.The core of the project was developed using Python, 
-                    where I applied Object-Oriented Programming (OOP) concepts to model the major components of a Newtonian telescope, such as the primary mirror, secondary mirror, light rays, focal point, and observer position. Each component was 
-                    represented as a class, allowing modular design, code reusability, and easy extension of functionality. This approach helped in clearly simulating how parallel light rays reflect from the primary mirror, get redirected by the secondary mirror, 
-                    and finally converge at the focal point to form an image.The simulator allows users to visualize the ray tracing process, adjust telescope parameters such as mirror curvature, focal length, and alignment, and observe how these changes affect image formation. 
-                    Through this project, I strengthened my understanding of optical physics concepts as well as practical software design principles.To enhance realism and provide a better visual experience, I integrated the project with a Blender 3D rotation simulator. 
-                    Using Blender, I created a 3D model of a Newtonian telescope and implemented real-time rotational motion, allowing the telescope to rotate along different axes similar to a real astronomical telescope. This helped bridge the gap between theoretical simulation 
-                    and real-world mechanical behavior.By combining Python programming, OOP design, scientific simulation, and Blender 3D visualization, this project reflects my ability to work across multiple technologies and domains. It demonstrates my skills in problem-solving, 
-                    simulation development, physics-based modeling, and 3D visualization, and represents a strong foundation for future work in scientific computing, simulation systems, and software development.</p>
-
-                <div class="tech">
-                    <h3>Technologies</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>QtPy5</li>
-                            <li>Blender</li>
-                        </ul></div>
-            </div>
-            <h4>Screen-Shots</h4>
-            <div class="Screen-Shots">
-                    <div class="photos" id="slideshow">
-                        <div class="screenshot" id="screenshot-1">
-                            <img src="images/img14.webp" alt="screenshot1">
-                        </div>
-                        <div class="screenshot" id="screenshot-2">
-                            <img src="images/img15.webp" alt="screenshot2">
-                        </div>   
-                        <div class="screenshot" id="screenshot-2">
-                            <img src="images/img16.webp" alt="screenshot2">
-                        </div> 
-                        <div class="screenshot" id="screenshot-2">
-                            <img src="images/img17.webp" alt="screenshot2">
-                        </div>     
-                    </div>
-            </div>
-            <div class="indicators">
-                <span class="indicator" data-index="0"></span>
-                <span class="indicator" data-index="1"></span>
-                <span class="indicator" data-index="2"></span>
-                <span class="indicator" data-index="3"></span>
-            </div>
-            <h4>Finally.</h4>
-            <div class="video-container">
-                <video id="projectVideo" src="videos/video.mp4"autoplay muted loop></video>
-            </div>
+    <main class="project-page">
+        <section class="project-hero">
+            <div class="project-eyebrow">Scientific Computing</div>
+            <h1>Newtonian <span>Telescope Simulator</span></h1>
+            <p class="project-intro">An OOP-based Python optical simulator paired with real-time 3D Blender mechanical rotation models.</p>
         </section>
-        
-    </div>
-
-
-<section class="project-navigation">
-    <div class="nav-wrapper">
-        <a href="project2.html" class="nav-prev">
-            <i class="fa-solid fa-arrow-left"></i> Previous Project
-        </a>
-        <a href="project4.html" class="nav-next">
-            Next Project <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
-
-</section>
-
-<footer class="footer">
-    <div class="footer-text">
-        <p>Copyright &copy; 2025 by @kevirocks | All Rights Reserved</p>
-    </div>
-
-    <div class="footer-iconTop">
-        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-    </div>
-</footer>
-
-
-<script src="project3.js"></script>
+        <section class="project-summary">
+            <div class="project-description"><p>This academic project models light-ray geometry, primary and secondary mirror reflections, focal points, and observer positions. The Python application uses modular classes and a PyQt interface, while Blender provides interactive 3D telescope rotation.</p></div>
+            <div class="tech-panel"><h2>Stack Used</h2><ul class="tech-list">
+                <li>Python 3</li><li>PyQt5</li><li>Blender 3D</li><li>NumPy</li>
+            </ul></div>
+        </section>
+        <section class="media-section">
+            <h2 class="media-heading">System Screenshots</h2>
+            <div class="media-panel"><div class="slideshow"><div class="slides" id="slideshow">
+                <div class="slide"><img src="images/img14.webp" alt="Telescope UI 1"></div><div class="slide"><img src="images/img15.webp" alt="Telescope UI 2"></div><div class="slide"><img src="images/img16.webp" alt="Telescope UI 3"></div><div class="slide"><img src="images/img17.webp" alt="Telescope UI 4"></div>
+            </div></div><div class="slider-controls">
+                <button class="indicator active" data-index="0" aria-label="Slide 1"></button><button class="indicator" data-index="1" aria-label="Slide 2"></button><button class="indicator" data-index="2" aria-label="Slide 3"></button><button class="indicator" data-index="3" aria-label="Slide 4"></button>
+            </div></div>
+        </section>
+        <section class="media-section"><h2 class="media-heading">Video Demo</h2><div class="video-wrap"><video src="videos/video.mp4" autoplay muted loop playsinline controls></video></div></section>
+    </main>
+    <nav class="project-nav">
+        <a href="project2.html"><i class="fa-solid fa-arrow-left"></i> Previous Project</a>
+        <a href="project4.html" class="next">Next Project <i class="fa-solid fa-arrow-right"></i></a>
+    </nav>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand"><a href="../index.html" class="logo"><span class="logo-bracket">&lt;</span>KH<span class="logo-bracket">/&gt;</span></a><p>Full-Stack Developer &amp; Creative Technologist</p></div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/kevin-hirosh-dabarera-33630b273/?originalSubdomain=lk" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/kevinhirosh11/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/KevinHirosh11" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://discord.com/channels/@me" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Kevin Hirosh. All rights reserved. Built with <i class="fa-solid fa-heart"></i></p></div>
+    </footer>
+    <script src="project3.js"></script>
 </body>
 </html>

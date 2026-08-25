@@ -13,11 +13,10 @@ menuToggle?.addEventListener('click', () => {
     document.body.style.overflow = navbar.classList.contains('active') ? 'hidden' : '';
 });
 
-// Close menu when clicking nav links
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navbar.classList.remove('active');
+        menuToggle?.classList.remove('active');
+        navbar?.classList.remove('active');
         document.body.style.overflow = '';
     });
 });
@@ -26,17 +25,12 @@ document.querySelectorAll('.nav-link').forEach(link => {
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
-    
-    // Add scrolled class for glass effect
     header?.classList.toggle('scrolled', currentScroll > 100);
-    
-    // Hide/show header on scroll
     if (currentScroll > lastScroll && currentScroll > 200) {
         header.style.transform = 'translateY(-100%)';
     } else {
         header.style.transform = 'translateY(0)';
     }
-    
     lastScroll = currentScroll;
 });
 
@@ -46,12 +40,10 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 function updateActiveNavLink() {
     const scrollY = window.scrollY;
-    
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 150;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -62,53 +54,37 @@ function updateActiveNavLink() {
         }
     });
 }
-
 window.addEventListener('scroll', updateActiveNavLink);
 
 /* ==================== CUSTOM CURSOR ==================== */
 if (window.matchMedia("(pointer: fine)").matches) {
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-    
+    let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
     function animateCursor() {
         cursorX += (mouseX - cursorX) * 0.1;
         cursorY += (mouseY - cursorY) * 0.1;
-        
         cursorFollower.style.left = cursorX + 'px';
         cursorFollower.style.top = cursorY + 'px';
-        
         requestAnimationFrame(animateCursor);
     }
     animateCursor();
-    
-    // Cursor hover effect on interactive elements
-    const hoverElements = document.querySelectorAll('a, button, .btn, input, textarea, .portfolio-card, .service-card');
-    hoverElements.forEach(el => {
+    document.querySelectorAll('a, button, .btn, input, textarea, .portfolio-card, .service-card').forEach(el => {
         el.addEventListener('mouseenter', () => cursorFollower.classList.add('hover'));
         el.addEventListener('mouseleave', () => cursorFollower.classList.remove('hover'));
     });
-    
-    // Hide default cursor
     document.body.style.cursor = 'none';
-    document.querySelectorAll('*').forEach(el => el.style.cursor = 'none');
 }
 
 /* ==================== PARTICLE BACKGROUND ==================== */
 const canvas = document.getElementById('particles-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-let animationId;
+const ctx = canvas?.getContext('2d');
+let particles = [], animationId;
 
 function resizeCanvas() {
+    if (!canvas) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
-
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
@@ -121,17 +97,14 @@ class Particle {
         this.speedY = (Math.random() - 0.5) * 0.5;
         this.opacity = Math.random() * 0.5 + 0.2;
     }
-    
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        
         if (this.x > canvas.width) this.x = 0;
         if (this.x < 0) this.x = canvas.width;
         if (this.y > canvas.height) this.y = 0;
         if (this.y < 0) this.y = canvas.height;
     }
-    
     draw() {
         ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
         ctx.beginPath();
@@ -142,10 +115,8 @@ class Particle {
 
 function initParticles() {
     particles = [];
-    const particleCount = Math.min((canvas.width * canvas.height) / 15000, 100);
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
+    const count = Math.min((canvas.width * canvas.height) / 15000, 100);
+    for (let i = 0; i < count; i++) particles.push(new Particle());
 }
 
 function connectParticles() {
@@ -153,10 +124,9 @@ function connectParticles() {
         for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 150) {
-                const opacity = (1 - distance / 150) * 0.15;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+                const opacity = (1 - dist / 150) * 0.15;
                 ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
@@ -170,24 +140,14 @@ function connectParticles() {
 
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-    });
-    
+    particles.forEach(p => { p.update(); p.draw(); });
     connectParticles();
     animationId = requestAnimationFrame(animateParticles);
 }
 
 initParticles();
 animateParticles();
-
-window.addEventListener('resize', () => {
-    cancelAnimationFrame(animationId);
-    initParticles();
-    animateParticles();
-});
+window.addEventListener('resize', () => { cancelAnimationFrame(animationId); initParticles(); animateParticles(); });
 
 /* ==================== TYPED.JS ==================== */
 const typed = new Typed('.typed-text', {
@@ -200,59 +160,31 @@ const typed = new Typed('.typed-text', {
 });
 
 /* ==================== SCROLL REVEAL ==================== */
-const revealElements = document.querySelectorAll(
-    '.hero-content, .hero-image, .section-header, .about-grid, ' +
-    '.services-grid, .portfolio-card, .contact-grid, .contact-card, .contact-form'
-);
-
+const revealElements = document.querySelectorAll('.hero-content, .hero-image, .section-header, .about-grid, .services-grid, .portfolio-card, .contact-grid, .contact-card, .contact-form');
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
 revealElements.forEach(el => revealObserver.observe(el));
-
-// Initial reveal for above-fold content
 setTimeout(() => {
-    document.querySelectorAll('.hero-content, .hero-image').forEach(el => {
-        el.classList.add('active');
-    });
+    document.querySelectorAll('.hero-content, .hero-image').forEach(el => el.classList.add('active'));
 }, 100);
 
 /* ==================== CONTACT FORM HANDLING ==================== */
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', async e => {
         e.preventDefault();
-        
-        // Show loading state
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
-        
         const formData = new FormData(contactForm);
-        
         try {
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            });
-            
+            const response = await fetch(contactForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
             if (response.ok) {
                 submitBtn.classList.remove('loading');
                 submitBtn.classList.add('success');
-                
-                // Reset form after success
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitBtn.classList.remove('success');
-                    submitBtn.disabled = false;
-                }, 3000);
-            } else {
-                throw new Error('Form submission failed');
-            }
+                setTimeout(() => { contactForm.reset(); submitBtn.classList.remove('success'); submitBtn.disabled = false; }, 3000);
+            } else { throw new Error('Failed'); }
         } catch (error) {
             console.error('Error:', error);
             submitBtn.classList.remove('loading');
@@ -262,68 +194,36 @@ if (contactForm) {
     });
 }
 
-/* ==================== SMOOTH SCROLL FOR ANCHOR LINKS ==================== */
+/* ==================== SMOOTH SCROLL ==================== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+            const offset = 80;
+            const pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: pos, behavior: 'smooth' });
         }
     });
 });
 
-/* ==================== SERVICE CARD TILT EFFECT ==================== */
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
+/* ==================== SERVICE CARD TILT ==================== */
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        card.style.transform = `perspective(1000px) rotateX(${(y - cy) / 20}deg) rotateY(${(cx - x) / 20}deg) translateY(-10px)`;
     });
-    
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
 });
 
-/* ==================== PERFORMANCE: THROTTLE SCROLL EVENTS ==================== */
-function throttle(func, limit) {
-    let inThrottle;
-    return function(...args) {
-        if (!inThrottle) {
-            func.apply(this, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
-}
-
-// Apply throttle to scroll handler
-window.addEventListener('scroll', throttle(() => {
-    // Any additional scroll logic can go here
-}, 16));
-
-/* ==================== INITIALIZATION ==================== */
+/* ==================== INIT ==================== */
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure initial active state
     updateActiveNavLink();
-    
-    // Trigger initial animations
-    setTimeout(() => {
-        document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
-    }, 200);
+    setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('active')), 200);
 });
